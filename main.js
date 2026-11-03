@@ -8,8 +8,8 @@
       systems: ["Player data saving and loading", "Egg hatching and shop systems", "Garden and growing-spot management", "Monster growth and evolution mechanics", "Food, progression, and gameplay UI"],
       challenges: "Challenge and solution notes were not included in the supplied project materials.",
       result: "Publicly published Roblox experience with a playable game link and supplied gameplay recording.",
-      media: '<div class="media-stack"><video controls preload="metadata" poster="Games/Grow%20A%20monster/1793119598401-01a17e40-e8d0-7081-bce0-33cfad6e693b.png"><source src="Games/Grow%20A%20monster/Screen%20Recording%202026-10-29%20154134.mp4" type="video/mp4">Your browser does not support video playback.</video><img loading="lazy" src="Games/Grow%20A%20monster/1793119598401-01a17e40-e8d0-7081-bce0-33cfad6e693b.png" alt="Grow A Monster thumbnail"><img loading="lazy" src="Games/Grow%20A%20monster/370684ea-810c-4d45-8b60-98cb500230c0%20(2).jpeg" alt="Grow A Monster gameplay screenshot"></div>',
-      action: '<a class="project-action primary" href="https://www.roblox.com/share?code=63b1524d33c34d44b17d2159e722d764&type=ExperienceDetails&stamp=1793269537089" target="_blank" rel="noopener noreferrer">Play on Roblox ↗</a><a class="project-action secondary" href="Games/Grow%20A%20monster/Screen%20Recording%202026-10-29%20154134.mp4" target="_blank" rel="noopener noreferrer">Watch gameplay ↗</a>'
+      media: '<div class="media-stack"><video controls preload="metadata" poster="./Games/Grow%20A%20monster/1793119598401-01a17e40-e8d0-7081-bce0-33cfad6e693b.png"><source src="./Games/Grow%20A%20monster/Screen%20Recording%202026-10-29%20154134.mp4" type="video/mp4">Your browser does not support video playback.</video><img loading="lazy" src="./Games/Grow%20A%20monster/1793119598401-01a17e40-e8d0-7081-bce0-33cfad6e693b.png" alt="Grow A Monster thumbnail"><img loading="lazy" src="./Games/Grow%20A%20monster/370684ea-810c-4d45-8b60-98cb500230c0%20(2).jpeg" alt="Grow A Monster gameplay screenshot"></div>',
+      action: '<a class="project-action primary" href="https://www.roblox.com/share?code=63b1524d33c34d44b17d2159e722d764&type=ExperienceDetails&stamp=1793269537089" target="_blank" rel="noopener noreferrer">Play on Roblox ↗</a><a class="project-action secondary" href="./Games/Grow%20A%20monster/Screen%20Recording%202026-10-29%20154134.mp4" target="_blank" rel="noopener noreferrer">Watch gameplay ↗</a>'
     },
     yuddha: {
       kicker: "Meta Quest · VR game", title: "Yuddhabhumi",
@@ -19,7 +19,7 @@
       systems: ["Gameplay mechanics", "UI features", "VR interactions", "Debugging and gameplay optimization"],
       challenges: "Specific challenge-and-solution details were not included in the supplied project materials.",
       result: "Released on the Meta platform with an official Meta Store listing.",
-      media: '<div class="media-stack"><img src="Games/Yuddhabhumi/Screenshot%202026-11-03%20123537.png" alt="Yuddhabhumi VR game screenshot"><img src="Games/Yuddhabhumi/Screenshot%202026-11-03%20123511.png" alt="Yuddhabhumi VR game screenshot"><img src="Games/Yuddhabhumi/Screenshot%202026-11-03%20123452.png" alt="Yuddhabhumi VR game screenshot"></div>',
+      media: '<div class="media-stack"><img src="./Games/Yuddhabhumi/Screenshot%202026-11-03%20123537.png" alt="Yuddhabhumi VR game screenshot"><img src="./Games/Yuddhabhumi/Screenshot%202026-11-03%20123511.png" alt="Yuddhabhumi VR game screenshot"><img src="./Games/Yuddhabhumi/Screenshot%202026-11-03%20123452.png" alt="Yuddhabhumi VR game screenshot"></div>',
       action: '<a class="project-action primary" href="https://www.meta.com/en-gb/experiences/yuddhabhumi/1285621444625659/" target="_blank" rel="noopener noreferrer">View on Meta Store ↗</a>'
     },
     helmet: {
@@ -30,7 +30,7 @@
       systems: ["Prototype project image supplied"],
       challenges: "Technical challenge details were not included in the supplied project materials.",
       result: "Project documentation represented by the supplied prototype image.",
-      media: '<img src="IoT%20projects/Smart%20Helmet.jpeg" alt="Smart Helmet project">',
+      media: '<img src="./IoT%20projects/Smart%20Helmet.jpeg" alt="Smart Helmet project">',
       action: ""
     },
     parking: {
@@ -41,7 +41,7 @@
       systems: ["Prototype project image supplied"],
       challenges: "Technical challenge details were not included in the supplied project materials.",
       result: "Project documentation represented by the supplied prototype image.",
-      media: '<img src="IoT%20projects/Car%20parking%20system.jpg" alt="Car Parking System project">',
+      media: '<img src="./IoT%20projects/Car%20parking%20system.jpg" alt="Car Parking System project">',
       action: ""
     }
   };
