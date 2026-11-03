@@ -80,6 +80,7 @@
     mobileMenu.setAttribute("aria-hidden", "true");
     menuToggle.setAttribute("aria-expanded", "false");
     menuToggle.setAttribute("aria-label", "Open menu");
+    menuToggle.focus({ preventScroll: true });
   };
   menuToggle.addEventListener("click", () => {
     const isOpen = mobileMenu.classList.toggle("open");
@@ -87,8 +88,23 @@
     menuToggle.setAttribute("aria-expanded", String(isOpen));
     menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   });
+  mobileMenu.addEventListener("click", (event) => {
+    const target = event.target instanceof Element ? event.target : null;
+    if (target && target.closest("[data-close-menu]")) {
+      event.preventDefault();
+      event.stopPropagation();
+      closeMobileMenu();
+    }
+  });
+  mobileMenu.addEventListener("pointerup", (event) => {
+    const target = event.target instanceof Element ? event.target : null;
+    if (target && target.closest("[data-close-menu]")) {
+      event.preventDefault();
+      event.stopPropagation();
+      closeMobileMenu();
+    }
+  });
   $$(".mobile-menu a").forEach((link) => link.addEventListener("click", closeMobileMenu));
-  $(".mobile-menu-back").addEventListener("click", closeMobileMenu);
   window.addEventListener("resize", () => {
     if (window.innerWidth > 700) closeMobileMenu();
   });
