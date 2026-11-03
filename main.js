@@ -75,6 +75,7 @@
 
   const menuToggle = $(".menu-toggle"), mobileMenu = $(".mobile-menu");
   const closeMobileMenu = () => {
+    if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
     mobileMenu.classList.remove("open");
     mobileMenu.setAttribute("aria-hidden", "true");
     menuToggle.setAttribute("aria-expanded", "false");
@@ -87,6 +88,7 @@
     menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   });
   $$(".mobile-menu a").forEach((link) => link.addEventListener("click", closeMobileMenu));
+  $(".mobile-menu-back").addEventListener("click", closeMobileMenu);
   window.addEventListener("resize", () => {
     if (window.innerWidth > 700) closeMobileMenu();
   });
