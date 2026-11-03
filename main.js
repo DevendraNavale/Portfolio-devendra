@@ -74,8 +74,22 @@
   $$(".cert-card").forEach((card) => card.addEventListener("click", () => window.open(card.dataset.cert, "_blank", "noopener")));
 
   const menuToggle = $(".menu-toggle"), mobileMenu = $(".mobile-menu");
-  menuToggle.addEventListener("click", () => mobileMenu.classList.toggle("open"));
-  $$(".mobile-menu a").forEach((link) => link.addEventListener("click", () => mobileMenu.classList.remove("open")));
+  const closeMobileMenu = () => {
+    mobileMenu.classList.remove("open");
+    mobileMenu.setAttribute("aria-hidden", "true");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open menu");
+  };
+  menuToggle.addEventListener("click", () => {
+    const isOpen = mobileMenu.classList.toggle("open");
+    mobileMenu.setAttribute("aria-hidden", String(!isOpen));
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  });
+  $$(".mobile-menu a").forEach((link) => link.addEventListener("click", closeMobileMenu));
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 700) closeMobileMenu();
+  });
 
   if (window.matchMedia("(pointer:fine)").matches) {
     const cursor = $(".cursor"), ring = $(".cursor-ring");
