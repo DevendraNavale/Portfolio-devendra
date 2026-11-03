@@ -1,73 +1,129 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-    <script src="https://kit.fontawesome.com/YOUR-FONT-AWESOME-KIT.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <!-- Navbar -->
-    <header>
-        <h1>My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090a0d" />
+    <meta name="description" content="Devendra Navale — game developer building worlds, mechanics, and experiences." />
+    <title>Devendra Navale — Game Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="loader" aria-label="Loading portfolio" role="status">
+      <div class="loader-mark">DN</div>
+      <div class="loader-track"><span></span></div>
+      <p>Entering the world</p>
+    </div>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+    <canvas id="scene" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Devendra Navale home"><span>DN</span><em>Unity / Game developer</em></a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#about">About</a><a href="#work">Work</a><a href="#journey">Journey</a><a href="#contact">Contact</a><a class="cv-link" href="Resume/Devendra-CV.pdf" download="Devendra-Navale-CV.pdf" target="_blank" rel="noopener">View CV ↗</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-label="Open menu"><span></span><span></span></button>
     </header>
+    <div class="mobile-menu"><a href="#about">About</a><a href="#work">Work</a><a href="#journey">Journey</a><a href="#contact">Contact</a><a class="cv-link" href="Resume/Devendra-CV.pdf" download="Devendra-Navale-CV.pdf" target="_blank" rel="noopener">View CV ↗</a></div>
 
-    <!-- Hero Section -->
-    <section id="home">
-        <div class="hero-content">
-            <h2>Hi, I'm <span class="highlight">Devendra Navale
-            </span></h2>
-            <p>Web Developer | Designer | Freelancer</p>
-            <a href="#projects" class="btn">View My Work</a>
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Unity / Game developer <span>／</span> Mumbai, India</p>
+          <h1><span>DEVENDRA</span><span class="hero-last">NAVALE</span></h1>
+          <p class="hero-line">Building worlds, mechanics,<br /><i>and experiences.</i></p>
+          <a class="enter-link" href="#about"><span class="enter-icon">↘</span><span>Explore portfolio</span></a>
         </div>
-    </section>
+        <div class="hero-meta"><span>Scroll to discover</span><span class="scroll-line"></span><span>01 — 07</span></div>
+        <div class="hero-note">A quiet place for<br />loud ideas.</div>
+      </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>A passionate web developer with experience in modern front-end and back-end technologies.</p>
-    </section>
+      <section class="section about" id="about">
+        <div class="section-label"><span>02</span><span>About me</span></div>
+        <div class="about-grid">
+          <div class="section-heading reveal"><p class="eyebrow">The person behind the pixels</p><h2>Curious by nature.<br /><i>Driven by play.</i></h2></div>
+          <div class="about-text reveal">
+            <p class="lead">I’m Devendra, a B.Sc. Information Technology graduate who enjoys turning systems into experiences people can feel.</p>
+            <p>My work sits between gameplay, interaction, and interface design. From Unity-based VR mechanics to a published Roblox simulator, I like building the small details that make a world feel alive.</p>
+            <div class="about-facts"><div><strong>2023—26</strong><span>B.Sc. Information Technology<br />Chetana’s College</span></div><div><strong>02</strong><span>Internship experiences<br />Game + frontend</span></div></div>
+          </div>
+        </div>
+      </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
+      <section class="section skills" id="skills">
+        <div class="section-label"><span>03</span><span>What I work with</span></div>
+        <div class="skills-intro reveal"><p class="eyebrow">A toolkit for making</p><h2>From first idea<br />to <i>felt experience.</i></h2></div>
+        <div class="skills-list">
+          <div class="skill-row reveal"><span class="skill-number">01</span><h3>Game development</h3><div class="skill-items">Gameplay mechanics <span>·</span> UI implementation <span>·</span> Debugging</div></div>
+          <div class="skill-row reveal"><span class="skill-number">02</span><h3>Programming</h3><div class="skill-items">C# <span>·</span> Luau <span>·</span> JavaScript</div></div>
+          <div class="skill-row reveal"><span class="skill-number">03</span><h3>Game engines</h3><div class="skill-items">Unity <span>·</span> Roblox Studio</div></div>
+          <div class="skill-row reveal"><span class="skill-number">04</span><h3>Tools & web</h3><div class="skill-items">Git <span>·</span> GitHub <span>·</span> HTML <span>·</span> CSS</div></div>
+        </div>
+      </section>
+
+      <section class="section work" id="work">
+        <div class="section-label"><span>04</span><span>Selected work</span></div>
+        <div class="work-head reveal"><div><p class="eyebrow">Worlds I’ve helped shape</p><h2>Selected <i>projects.</i></h2></div><p>Games, tools, and experiments<br />made with intent.</p></div>
         <div class="project-grid">
-            <div class="project-card">
-                <img src="images/project1.jpg" alt="Project 1">
-                <h3>Project Title</h3>
-                <p>A brief description of the project.</p>
-            </div>
-            <div class="project-card">
-                <img src="images/project2.jpg" alt="Project 2">
-                <h3>Project Title</h3>
-                <p>A brief description of the project.</p>
-            </div>
+          <article class="project-card project-large reveal" data-project="grow">
+            <button class="project-trigger" type="button" aria-label="View Grow A Monster details">
+              <div class="project-image"><img loading="lazy" src="Games/Grow%20A%20monster/370684ea-810c-4d45-8b60-98cb500230c0%20(2).jpeg" alt="Grow A Monster gameplay preview" /><span class="image-index">01 / 04</span></div>
+              <div class="project-info"><div><p class="eyebrow">Roblox <span>·</span> Simulator</p><h3>Grow A Monster</h3><span class="project-cta">View project ↗</span></div><span class="round-arrow">↗</span></div>
+            </button>
+          </article>
+          <article class="project-card project-tall reveal" data-project="yuddha">
+            <button class="project-trigger" type="button" aria-label="View Yuddhabhumi details">
+              <div class="project-image"><img loading="lazy" src="Games/Yuddhabhumi/Thumbnail.png" alt="Yuddhabhumi VR game artwork" /><span class="image-index">02 / 04</span></div>
+              <div class="project-info"><div><p class="eyebrow">Meta Quest <span>·</span> VR</p><h3>Yuddhabhumi</h3><span class="project-cta">View project ↗</span></div><span class="round-arrow">↗</span></div>
+            </button>
+          </article>
+          <article class="project-card reveal" data-project="helmet">
+            <button class="project-trigger" type="button" aria-label="View Smart Helmet details">
+              <div class="project-image"><img loading="lazy" src="IoT%20projects/Smart%20Helmet.jpeg" alt="Smart Helmet IoT project" /><span class="image-index">03 / 04</span></div>
+              <div class="project-info"><div><p class="eyebrow">IoT project</p><h3>Smart Helmet</h3><span class="project-cta">View project ↗</span></div><span class="round-arrow">↗</span></div>
+            </button>
+          </article>
+          <article class="project-card reveal" data-project="parking">
+            <button class="project-trigger" type="button" aria-label="View Car Parking System details">
+              <div class="project-image"><img loading="lazy" src="IoT%20projects/Car%20parking%20system.jpg" alt="Car Parking System IoT project" /><span class="image-index">04 / 04</span></div>
+              <div class="project-info"><div><p class="eyebrow">IoT project</p><h3>Car Parking System</h3><span class="project-cta">View project ↗</span></div><span class="round-arrow">↗</span></div>
+            </button>
+          </article>
         </div>
-    </section>
+      </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out through my social media channels.</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+      <section class="section journey" id="journey">
+        <div class="section-label"><span>05</span><span>The journey</span></div>
+        <div class="journey-grid"><div class="journey-title reveal"><p class="eyebrow">A timeline in progress</p><h2>Learning by<br /><i>building.</i></h2></div>
+          <div class="timeline">
+            <article class="timeline-item reveal"><span class="timeline-date">JAN 2026</span><div><h3>Game Development Intern</h3><p class="timeline-company">Blackhole Infiverse</p><p>Contributed to Yuddhabhumi, a VR game for Meta Quest. Built gameplay mechanics and UI features using Unity and C#, while working on VR interactions, debugging, and optimization.</p></div></article>
+            <article class="timeline-item reveal"><span class="timeline-date">MAR 2025</span><div><h3>Frontend Developer Intern</h3><p class="timeline-company">Intern Intelligence · Remote</p><p>Developed responsive frontend components with HTML, CSS, and JavaScript. Improved website layouts and visual consistency.</p></div></article>
+            <article class="timeline-item reveal"><span class="timeline-date">2023—26</span><div><h3>B.Sc. Information Technology</h3><p class="timeline-company">Chetana’s College</p><p>Building a foundation across software development, interactive systems, and creative technology.</p></div></article>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <footer>
-        <p>&copy; 2025 Devendra Navale. All rights reserved.</p>
-    </footer>
-</body>
+      <section class="section certificates">
+        <div class="section-label"><span>06</span><span>Recognition</span></div>
+        <div class="cert-head reveal"><p class="eyebrow">A few meaningful notes</p><h2>Letters from<br /><i>the journey.</i></h2></div>
+        <div class="cert-grid"><button class="cert-card reveal" type="button" data-cert="Certificates/Android%20Application%20Developer%20Appreciation%20Letter.pdf"><span class="cert-symbol">✦</span><span class="cert-type">Appreciation letter</span><strong>Android Application<br />Developer</strong><span class="cert-open">Open letter ↗</span></button><button class="cert-card reveal" type="button" data-cert="Certificates/Al%20Analytics%20Appreciation%20Letter.pdf"><span class="cert-symbol">✧</span><span class="cert-type">Appreciation letter</span><strong>AI Analytics<br />Appreciation</strong><span class="cert-open">Open letter ↗</span></button></div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="contact-orbit" aria-hidden="true"></div><div class="section-label"><span>07</span><span>Start a conversation</span></div>
+        <div class="contact-content reveal"><p class="eyebrow">Have a world to build?</p><h2>Let’s make<br /><i>something real.</i></h2><div class="contact-actions"><a class="contact-button" href="mailto:navledevendra71@gmail.com">Get in touch <span>↗</span></a><a class="contact-button cv-button" href="Resume/Devendra-CV.pdf" download="Devendra-Navale-CV.pdf" target="_blank" rel="noopener">View CV <span>↗</span></a></div></div>
+        <div class="contact-footer"><span>© 2026 Devendra Navale</span><span>Mumbai, India</span><a href="tel:+918928278059">+91 89282 78059</a><a href="mailto:navledevendra71@gmail.com">Email</a><a href="https://www.linkedin.com/in/devendra-navale" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/DevendraNavale" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+      </section>
+    </main>
+
+    <div class="modal" aria-hidden="true"><div class="modal-backdrop"></div><div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" type="button" aria-label="Close details">×</button><div class="modal-media"></div><div class="modal-copy"><p class="eyebrow" id="modal-kicker"></p><h2 id="modal-title"></h2><p id="modal-description"></p><div class="modal-meta"><div><span>Role</span><strong id="modal-role"></strong></div><div><span>Technologies</span><strong id="modal-tech"></strong></div></div><div class="case-study-grid"><div><span>Systems & features</span><div id="modal-systems"></div></div><div><span>Development notes</span><p id="modal-challenges"></p></div></div><div class="modal-result"><span>Result</span><p id="modal-result"></p></div><div class="modal-actions"></div></div></div></div>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
